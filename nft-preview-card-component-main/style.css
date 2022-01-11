@@ -26,6 +26,10 @@ body {
 h2 {
   color: var(--white);
   margin: 10px 0 10px 0;
+  cursor: pointer;
+}
+h2:hover {
+  color: var(--Cyan);
 }
 .card {
   margin-top: 50px;
@@ -44,6 +48,11 @@ h2 {
   height: 100%;
   width: 100%;
   border-radius: 15px;
+  cursor: pointer;
+}
+.img:hover {
+  opacity: 0.3;
+  background: var(--Cyan);
 }
 .divider {
   height: 4px;
@@ -73,11 +82,15 @@ h2 {
   height: 50px;
   border: 1px solid white;
   border-radius: 50%;
+  margin-right: 15px;
 }
 #avatar_para {
-  margin-left: 10px;
   font-size: 18px;
   color: var(--white);
+  cursor: pointer;
+}
+#avatar_para:hover {
+  color: var(--Cyan);
 }
 #avatar-para-f {
   color: var(--Soft-blue);
