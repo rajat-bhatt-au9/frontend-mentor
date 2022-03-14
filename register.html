@@ -1,59 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Register</title>
 
     <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 50px;
-      }
-      .register-form {
-        border: 1px solid black;
-        width: 30%;
-        padding: 20px 20px 20px 20px;
-        border-radius: 5px;
-      }
+        @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 150px;
+            background-color: #f0ece3;
+            font-family: "Outfit", sans-serif;
+        }
+
+        .register-form {
+            border: 1px solid black;
+            width: 20%;
+            padding: 20px 20px 20px 20px;
+            border-radius: 5px;
+            background-color: #dfd3c3;
+            font-family: "Outfit", sans-serif;
+        }
+
+        #btn {
+            background-color: #1eb37c;
+            border-radius: 5px;
+            padding: 5px 2px 5px 2px;
+            height: 35px;
+        }
+
+        input {
+            width: 100%;
+            height: 25px;
+            border-radius: 3px;
+            font-size: 18px;
+        }
+
+        textarea {
+            width: 100%;
+            border-radius: 3px;
+            font-size: 18px;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="register-form">
-      <h2 style="text-align: center">Login Form</h2>
-      Name: <br /><input type="text" id="name" /><br /><br />
-      DOB: <br /><input type="date" id="dob" /><br /><br />
-      Gender: <br /><input type="text" id="name" /><br /><br />
-      Email: <br /><input type="text" id="email" /><br /><br />
-      Phone: <br /><input type="text" id="phone" /><br /><br />
-      Address: <br /><textarea
-        name="address"
-        id="address"
-        cols="20"
-        rows="3"
-      ></textarea
-      ><br /><br />
-      city: <br /><input type="text" id="city" /><br /><br />
-      State: <br /><input type="text" id="state" /><br /><br />
-      Pincode: <br /><input type="text" id="pin" /><br /><br />
-      Country: <br /><input type="text" id="country" /><br /><br />
-      <input type="button" value="Submit" onclick="validate()" />
+        <h2 style="text-align: center">Register Form</h2>
+        Name: <br /><input type="text" id="name" /><br /><br />
+        DOB: <br /><input type="date" id="dob" /><br /><br />
+        Gender: <br /><input type="text" id="gender" /><br /><br />
+        Email: <br /><input type="text" id="email" /><br /><br />
+        Phone: <br /><input type="text" id="phone" /><br /><br />
+        Address: <br /><textarea name="address" id="address" cols="20" rows="3"></textarea><br /><br />
+        city: <br /><input type="text" id="city" /><br /><br />
+        State: <br /><input type="text" id="state" /><br /><br />
+        Pincode: <br /><input type="text" id="pin" /><br /><br />
+        Country: <br /><input type="text" id="country" /><br /><br />
+        <input type="button" id='btn' value="Submit" onclick="validate()" />
+        <p>New user? Please <a href="./Login.html">SignIn</a></p>
     </div>
 
     <script>
-      function validate() {
-        let email = document.getElementById("email").value;
-        let pwd = document.getElementById("pwd").value;
-
-        if (email == "" || pwd == "") {
-          alert("Please fill the fields correctly");
-        } else {
-          alert("else condition");
+        function validate() {
+            let name = document.getElementById("name").value;
+            let dob = document.getElementById("dob").value;
+            let gender = document.getElementById("gender").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let address = document.getElementById("address").value;
+            let city = document.getElementById("city").value;
+            let state = document.getElementById("state").value;
+            let pin = document.getElementById("pin").value;
+            let country = document.getElementById("country").value;
+            if (name == "" || dob == "" || gender == "" || email == "" || phone == "" || address == "" || city == "" || state == "" || pin == "" || country) {
+                alert("Please fill the fields correctly")
+            } else {
+                window.location.assign("file:///home/ubuntu/Desktop/HTML/HTML_14-03-2022/task1html/Login.html")
+            }
         }
-      }
     </script>
-  </body>
+</body>
+
 </html>
