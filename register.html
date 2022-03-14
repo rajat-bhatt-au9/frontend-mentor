@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+      }
+      .register-form {
+        border: 1px solid black;
+        width: 30%;
+        padding: 20px 20px 20px 20px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="register-form">
+      <h2 style="text-align: center">Login Form</h2>
+      Name: <br /><input type="text" id="name" /><br /><br />
+      DOB: <br /><input type="date" id="dob" /><br /><br />
+      Gender: <br /><input type="text" id="name" /><br /><br />
+      Email: <br /><input type="text" id="email" /><br /><br />
+      Phone: <br /><input type="text" id="phone" /><br /><br />
+      Address: <br /><textarea
+        name="address"
+        id="address"
+        cols="20"
+        rows="3"
+      ></textarea
+      ><br /><br />
+      city: <br /><input type="text" id="city" /><br /><br />
+      State: <br /><input type="text" id="state" /><br /><br />
+      Pincode: <br /><input type="text" id="pin" /><br /><br />
+      Country: <br /><input type="text" id="country" /><br /><br />
+      <input type="button" value="Submit" onclick="validate()" />
+    </div>
+
+    <script>
+      function validate() {
+        let email = document.getElementById("email").value;
+        let pwd = document.getElementById("pwd").value;
+
+        if (email == "" || pwd == "") {
+          alert("Please fill the fields correctly");
+        } else {
+          alert("else condition");
+        }
+      }
+    </script>
+  </body>
+</html>
